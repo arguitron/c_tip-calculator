@@ -1,0 +1,226 @@
+:root {
+  --bg-color: hsl(185, 41%, 84%);
+  --cal-color: hsl(0, 0%, 100%);
+  --def-btn: hsl(183, 100%, 15%);
+  --active-btn: hsl(172, 67%, 45%);
+  --click-btn: hsl(172, 86%, 71%);
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Space Mono", monospace;
+}
+
+h1 {
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal-container {
+  display: flex;
+  background-color: var(--cal-color);
+  padding: 20px;
+  border-radius: 15px;
+  width: 600px;
+  height: 300px;
+}
+
+.input-container {
+  width: 50%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.input__label {
+  display: block;
+  font-size: 0.7rem;
+  color: hsl(240, 1%, 34%);
+}
+
+.input__input {
+  display: block;
+  padding: 5px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: inherit;
+  text-align: right;
+  background-color: hsl(0, 0%, 92%);
+  border: initial;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.icon-container {
+  position: relative;
+}
+
+.my-icon {
+  position: absolute;
+  bottom: 0;
+  margin: 8px;
+  width: 10px;
+}
+
+.input__tip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.input__tip__tip {
+  background-color: var(--def-btn);
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  padding-top: 3px;
+  font-weight: 700;
+}
+.input__tip__tip:hover {
+  background-color: var(--active-btn);
+  color: var(--def-btn);
+  transition: background-color 0.2s, color 0.2s;
+}
+.input__tip__tip:active {
+  background-color: var(--click-btn);
+  transition: none;
+}
+
+.input__tip .input__input {
+  text-align: center;
+}
+.output-out {
+  background-color: var(--def-btn);
+  width: 50%;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.output-container {
+}
+.output-tip {
+  display: flex;
+  justify-content: space-between;
+}
+
+.concept-up {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.concept-down {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.6rem;
+}
+
+.output-tip__amount {
+  font-weight: 700;
+  color: var(--active-btn);
+  font-size: 1.8rem;
+}
+
+.btn-reset {
+  background-color: var(--active-btn);
+  color: var(--def-btn);
+  border: initial;
+  font-weight: 700;
+  position: absolute;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: inherit;
+  bottom: 0;
+  cursor: pointer;
+}
+.btn-reset:hover {
+  background-color: var(--click-btn);
+  transition: background-color 0.2s;
+}
+
+.btn-reset:active {
+  background-color: var(--active-btn);
+  transition: none;
+}
+
+.btn-reset-blocked {
+  background-color: hsl(184, 14%, 56%);
+  color: var(--def-btn);
+  border: initial;
+  font-weight: 700;
+  position: absolute;
+  width: calc(100% - 40px);
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: inherit;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.attribution a {
+  color: #000;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*media 570*/
+
+@media only screen and (max-width: 600px) {
+  .cal-container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .input-container {
+    width: 100%;
+  }
+
+  .input__label {
+    margin-top: 10px;
+  }
+
+  .output-out {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .output-tip__amount {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .input__tip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

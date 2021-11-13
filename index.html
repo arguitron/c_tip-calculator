@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>AR<br />TIP</h1>
+        <div class="cal-container">
+          <div class="input-container">
+            <div class="input__bill">
+              <label for="bill" class="input__label"> Bill</label>
+              <div class="icon-container">
+                <img class="my-icon" src="images/icon-dollar.svg" alt="" />
+                <input
+                  type="text"
+                  name="bill"
+                  id="bill-input"
+                  class="input__input"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+            <div class="">
+              <label for="tip" class="input__label">Select Tip %</label>
+              <div class="input__tip">
+                <div class="input__tip__tip">5%</div>
+                <div class="input__tip__tip">10%</div>
+                <div class="input__tip__tip">15%</div>
+                <div class="input__tip__tip">25%</div>
+                <div class="input__tip__tip">50%</div>
+                <input
+                  type="text"
+                  name="tip"
+                  id="tip-input"
+                  class="input__input"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+            <div class="input__people">
+              <label for="people" class="input__label">Number of People</label>
+              <div class="icon-container">
+                <img class="my-icon" src="images/icon-person.svg" alt="" />
+                <input
+                  type="text"
+                  name="people"
+                  id="people-input"
+                  class="input__input"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="output-out">
+            <div class="output-container">
+              <div class="output-tip">
+                <div class="output-tip__concept">
+                  <p class="concept-up">Tip Amount</p>
+                  <p class="concept-down">/ person</p>
+                </div>
+                <p id="tip-amount" class="output-tip__amount">$0.00</p>
+              </div>
+              <div class="output-tip">
+                <div class="output-tip__concept">
+                  <p class="concept-up">Total</p>
+                  <p class="concept-down">/ person</p>
+                </div>
+                <p id="total-amount" class="output-tip__amount">$0.00</p>
+              </div>
+            </div>
+            <button id="reset-btn" class="btn-reset-blocked">RESET</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Made with 🖤 by <a href="https://github.com/arguitron/">Abel Guitron</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
